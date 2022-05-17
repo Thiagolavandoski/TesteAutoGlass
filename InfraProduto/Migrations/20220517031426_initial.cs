@@ -1,5 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
-using System;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
@@ -20,8 +20,8 @@ namespace InfraProduto.Migrations
                     DataDeFabricação = table.Column<DateTime>(type: "datetime2", nullable: false),
                     DataDeValidade = table.Column<DateTime>(type: "datetime2", nullable: false),
                     CodigoDoFornecedor = table.Column<int>(type: "int", nullable: false),
-                    DescricaoDoFornecedor = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    CNPJDoFornecedor = table.Column<int>(type: "int", nullable: false)
+                    DescricaoDoFornecedor = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    CNPJDoFornecedor = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {

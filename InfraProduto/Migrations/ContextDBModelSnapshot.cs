@@ -30,8 +30,9 @@ namespace InfraProduto.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CodigoDoProduto"), 1L, 1);
 
-                    b.Property<int>("CNPJDoFornecedor")
-                        .HasColumnType("int");
+                    b.Property<string>("CNPJDoFornecedor")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("CodigoDoFornecedor")
                         .HasColumnType("int");
@@ -43,6 +44,7 @@ namespace InfraProduto.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("DescricaoDoFornecedor")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("DescricaoDoProduto")
