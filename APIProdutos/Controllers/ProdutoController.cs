@@ -18,6 +18,10 @@ namespace APIProdutos.Controllers
             _ProdutoService = produtoService;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns>  </returns>
         [Route("All")]
         [HttpGet]
         public IActionResult GetAll()
